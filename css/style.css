@@ -22,9 +22,15 @@ h3{
 p{
    font-size: 14px;
 }
-#third{
+.fourth{
     background-color: rgb(198, 226, 244);
 }
 .active{
     color: navy;
+}
+.code{
+    font-size: 12px;
+    font-family: monospace;
+    color: rgb(223, 127, 1);
+    background-color: white;
 }
