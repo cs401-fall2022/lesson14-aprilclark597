@@ -1,14 +1,30 @@
+
+*{background-color: lavender;}
+
 h1{
     font-size: 30px;
     color: purple;
     text-align: center;
+    
    }
 h2{
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
-    background-color: lavender;
+    background-color: rgb(198, 226, 244);
 
+}
+h3{
+    font-size: 20px;
+    color: purple;
+    text-align: center;
+    text-decoration-line: underline;
 }
 p{
    font-size: 14px;
+}
+#third{
+    background-color: rgb(198, 226, 244);
+}
+.active{
+    color: navy;
 }
