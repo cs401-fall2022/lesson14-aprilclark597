@@ -10,26 +10,22 @@
   </head>
 
   <body>
+    <div style="text-align: center;">
+    <img src="top.png" alt="TS Logo">
+  </div>
     <h1>Learn TypeScript Basics!</h1>
     <h2>- for JavaScript Programmers</h2>
     <div>
       <p>
         If you're new to TypeScript, we can think of this new tool as a layer on
-        top of JavaScript that enforces strict types. Lorem ipsum dolor sit
-        amet, consectetur adipiscing elit. Suspendisse quam dui, fermentum
-        pellentesque cursus non, gravida vitae sem. Maecenas sed dignissim
-        augue, ultrices egestas mi. Integer laoreet nunc sit amet lectus porta
-        lacinia. Donec semper lorem posuere metus lacinia mattis. Donec porta
-        libero quis lorem aliquam placerat id eget metus. Maecenas rhoncus
-        egestas purus in blandit. Donec sed leo placerat magna facilisis semper.
-        Praesent a consequat metus. In pharetra massa ipsum, eu vulputate eros
-        pharetra eget. Duis luctus imperdiet diam, id facilisis ligula ornare
-        ut. Cras sagittis, turpis vel elementum tincidunt, ante odio eleifend
-        nisl, quis commodo quam mi a lectus. Integer nec arcu rhoncus, sagittis
-        augue non, dictum arcu.
+        top of JavaScript that enforces strict types. TypeScript knows the JavaScript 
+        language and will generate types for you in many cases. For example in creating a 
+        variable and assigning it to a particular value, TypeScript will use the value as its type.
+        You may have written JavaScript in Visual Studio Code, and had editor auto-completion. 
+        Visual Studio Code uses TypeScript under the hood to make it easier to work with JavaScript.
       </p>
-
-      <h3>Types</h3>
+      <br><br>
+      <h3>TYPES</h3>
       <p>
         TypeScript makes developers lives easier by enforcing strict types. 
         JavaScript provides language primitives like string and
@@ -40,31 +36,40 @@
       </p>
       <p class="code"><br>let helloWorld = "Hello World!"<br><br></p>
       <p>Typescript recognizes the text as a string, and sets the variable helloWorld to type string.</p>
-      <h3>Topic</h3>
+      <div style="text-align: center;"><img id="logo" src="jsts.jpg" alt="Typescript inside Javascript"></div>
+      <br><br>
+      <h3>DEFINING TYPES</h3>
       <p>
-        Donec porta libero quis lorem aliquam placerat id eget metus. Maecenas
-        rhoncus egestas purus in blandit. Donec sed leo placerat magna facilisis
-        semper. Praesent a consequat metus. In pharetra massa ipsum, eu
-        vulputate eros pharetra eget. Duis luctus imperdiet diam, id facilisis
-        ligula ornare ut. Cras sagittis, turpis vel elementum tincidunt, ante
-        odio eleifend nisl, quis commodo quam mi a lectus. Integer nec arcu
-        rhoncus, sagittis augue non, dictum arcu.
+        You can use a wide variety of design patterns in JavaScript. However, some design patterns make it 
+        difficult for types to be inferred automatically (for example, patterns that use dynamic programming).
+        To cover these cases, TypeScript supports an extension of the JavaScript language, which offers places 
+        for you to tell TypeScript what the types should be.
+        For example, to create an object with an inferred type which includes name: string and id: number, you can write:
+        <p class="code"><br>
+          const user = {
+            name: "April",
+            id: 4,
+          };
+        <br><br></p>
       </p>
-      <h3>Something Else</h3>
+      <br><br>
+      <h3>RUNTIME BEHAVIOR</h3>
       <p id = "third">
-        Donec porta libero quis lorem aliquam placerat id eget metus. Maecenas
-        rhoncus egestas purus in blandit. Donec sed leo placerat magna facilisis
-        semper. Praesent a consequat metus. In pharetra massa ipsum, eu
-        vulputate eros pharetra eget. Duis luctus imperdiet diam, id facilisis
-        ligula ornare ut. Cras sagittis, turpis vel elementum tincidunt, ante
-        odio eleifend nisl, quis commodo quam mi a lectus. Integer nec arcu
-        rhoncus, sagittis augue non, dictum arcu.
-      </p>
+        TypeScript is also a programming language that preserves the runtime behavior of JavaScript. 
+        For example, dividing by zero in JavaScript produces Infinity instead of throwing a runtime exception. 
+        As a principle, TypeScript never changes the runtime behavior of JavaScript code.
+        This means that if you move code from JavaScript to TypeScript, it is guaranteed to run the same way, 
+        even if TypeScript thinks that the code has type errors.
+        Keeping the same runtime behavior as JavaScript is a foundational promise of TypeScript because it 
+        means you can easily transition between the two languages without worrying about subtle differences 
+        that might make your program stop working.
+      <br><br></p>
+      <br><br>
       <div class = "fourth">
       <h3 class = "fourth">Migrating from JavaScript</h3>
       <p class = "fourth">For information on the process of migrating your JavaScript files to TypeScript, click the link below!</p>
       <a class="fourth" href="https://www.typescriptlang.org/docs/handbook/migrating-from-javascript.html" >https://www.typescriptlang.org/docs/handbook/migrating-from-javascript.html</a>
-    </div>
+    </div><br><br><br>
     </div>
   </body>
 </html>
