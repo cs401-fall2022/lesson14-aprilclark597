@@ -37,3 +37,23 @@ p{
 #logo{
     height: 200px;
 }
+
+.nav{
+    display: flex;
+}
+.nav ul{
+    list-style-type: none;
+    background-color: pink;
+    width: 100%;
+    text-align: center;
+}
+
+.nav ul li a{ 
+    position: relative;
+    float: left;
+    color: purple;
+    background-color: pink;
+    text-decoration: none;
+    text-size-adjust: large;
+    font-size: large;
+}
