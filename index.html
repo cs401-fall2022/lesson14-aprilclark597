@@ -1,92 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+<div class="page">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>TypeScriptLang</title>
-  <meta name="description" content="" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="/css/style.css" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TypeScriptLang</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
 
-<body>
-  <div class="nav">
-    <ul>
-      <br>
-      <li style="display: inline-block"><a href="http://127.0.0.1:3002/index.html#start">START</a></li>&emsp;
-      <li style="display: inline-block"><a href="http://127.0.0.1:3002/index.html#types">TYPES</a></li>&emsp;
-      <li style="display: inline-block"><a href="http://127.0.0.1:3002/index.html#definingTypes">DEFINING TYPES</a></li>&emsp;
-      <li style="display: inline-block"><a href="http://127.0.0.1:3002/index.html#runtime">RUNTIME BEHAVIOR</a></li>
+  <body>
+    <div class="nav">
+      <ul>
+        <br>
+        <li style="display: inline-block"><a href="http://127.0.0.1:3002/index.html#start">START</a></li>&emsp;&emsp;
+        <li style="display: inline-block"><a href="http://127.0.0.1:3002/index.html#types">TYPES</a></li>&emsp;&emsp;
+        <li style="display: inline-block"><a href="http://127.0.0.1:3002/index.html#definingTypes">DEFINING TYPES</a>
+        </li>&emsp;&emsp;
+        <li style="display: inline-block"><a href="http://127.0.0.1:3002/index.html#runtime">RUNTIME BEHAVIOR</a></li>&emsp;&emsp;
+        <li style="display: inline-block"><a href="http://127.0.0.1:3002/index.html#functions">FUNCTIONS</a></li>
+        <br><br>
+      </ul>
+    </div>
+    <br><br><br><br><br><br>
+    <div style="text-align: center;">
+      <img src="top.png" alt="TS Logo">
+    </div>
+    <br><br>
+    <h1 id="start">Learn TypeScript Basics!</h1>
+    <h2>- for JavaScript Programmers</h2><br>
+    <div>
+      <p>
+        If you're new to TypeScript, we can think of this new tool as a layer on
+        top of JavaScript that enforces strict types. TypeScript knows the JavaScript
+        language and will generate types for you in many cases. For example in creating a
+        variable and assigning it to a particular value, TypeScript will use the value as its type.
+        You may have written JavaScript in Visual Studio Code, and had editor auto-completion.
+        Visual Studio Code uses TypeScript under the hood to make it easier to work with JavaScript.
+        <br> <br>TypeScript is a bit unusual as a language in that it neither runs in an interpreter
+        (as Python and Ruby do) nor compiles down to a lower-level language (as Java and C do).
+        Instead, it compiles to another high-level language, JavaScript. It is this JavaScript that
+        runs, not your TypeScript. So TypeScript’s relationship with JavaScript is essential, but it
+        can also be a source of confusion. Understanding this relationship will help you be a more
+        effective TypeScript developer.
+      </p>
       <br><br>
-    </ul>
-  </div>
-  <br>
-  <div style="text-align: center;">
-    <img src="top.png" alt="TS Logo">
-  </div>
-  <h1 id="start">Learn TypeScript Basics!</h1>
-  <h2>- for JavaScript Programmers</h2>
-  <div>
-    <p>
-      If you're new to TypeScript, we can think of this new tool as a layer on
-      top of JavaScript that enforces strict types. TypeScript knows the JavaScript
-      language and will generate types for you in many cases. For example in creating a
-      variable and assigning it to a particular value, TypeScript will use the value as its type.
-      You may have written JavaScript in Visual Studio Code, and had editor auto-completion.
-      Visual Studio Code uses TypeScript under the hood to make it easier to work with JavaScript.
-    </p>
-    <br><br>
-    <h3 id="types">TYPES</h3>
-    <p>
-      TypeScript makes developers lives easier by enforcing strict types.
-      JavaScript provides language primitives like string and
-      number, but it doesn’t check that you’ve consistently assigned them.
-      TypeScript does this for us! This means that an existing JavaScript code
-      is not wasted - it is also TypeScript code. The main benefit of TypeScript is that it can
-      highlight unexpected behavior in your code, lowering the chance of bugs.
-    </p>
-    <p class="code"><br>let helloWorld = "Hello World!"<br><br></p>
-    <p>Typescript recognizes the text as a string, and sets the variable helloWorld to type string.</p>
-    <div style="text-align: center;"><img id="logo" src="jsts.jpg" alt="Typescript inside Javascript"></div>
-    <br><br>
-    <h3 id="definingTypes">DEFINING TYPES</h3>
-    <p>
-      You can use a wide variety of design patterns in JavaScript. However, some design patterns make it
-      difficult for types to be inferred automatically (for example, patterns that use dynamic programming).
-      To cover these cases, TypeScript supports an extension of the JavaScript language, which offers places
-      for you to tell TypeScript what the types should be.
-      For example, to create an object with an inferred type which includes name: string and id: number, you can write:
-    <p class="code"><br>
-      const user = {
-      name: "April",
-      id: 4,
-      };
+      <div>
+        <h3 id="types">TYPES</h3>
+        <p>TypeScript is a <strong>superset</strong> of JavaScript. In other words, all JavaScript programs are already
+          TypeScript programs. TypeScript has some syntax of its own, so TypeScript programs are not,
+          in general, valid JavaScript programs.<br><br>TypeScript adds a type system that models
+          JavaScript’s runtime behavior and tries to spot code which will throw exceptions at runtime.
+          But you shouldn’t expect it to flag every exception. It is possible for code to pass the
+          type checker but still throw at runtime.<br><br>While TypeScript’s type system largely
+          models JavaScript behavior, there are some constructs that JavaScript allows but TypeScript
+          chooses to bar, such as calling functions with the wrong number of arguments.
+          This is largely a matter of taste.<br><br>TypeScript makes developers lives easier by enforcing strict
+          types.
+          JavaScript provides language primitives like string and
+          number, but it doesn’t check that you’ve consistently assigned them.
+          TypeScript does this for us! This means that an existing JavaScript code
+          is not wasted - it is also TypeScript code. The main benefit of TypeScript is that it can
+          highlight unexpected behavior in your code, lowering the chance of bugs.
+        </p>
+        <p class="code"><br>let <span class="var">helloWorld</span> <span class="oper">=</span> <span
+            class="string">"Hello World!"</span><br><br>
+        </p>
+        <p>Typescript recognizes the text as a string, and sets the variable helloWorld to type string.</p>
+        <br><br>
+      </div>
+      <div style="text-align: center;"><img id="logo" src="jsts.jpg" alt="Typescript inside Javascript"></div>
       <br><br>
-    </p>
-    </p>
-    <br><br>
-    <h3 id="runtime">RUNTIME BEHAVIOR</h3>
-    <p id="third">
-      TypeScript is also a programming language that preserves the runtime behavior of JavaScript.
-      For example, dividing by zero in JavaScript produces Infinity instead of throwing a runtime exception.
-      As a principle, TypeScript never changes the runtime behavior of JavaScript code.
-      This means that if you move code from JavaScript to TypeScript, it is guaranteed to run the same way,
-      even if TypeScript thinks that the code has type errors.
-      Keeping the same runtime behavior as JavaScript is a foundational promise of TypeScript because it
-      means you can easily transition between the two languages without worrying about subtle differences
-      that might make your program stop working.
+      <h3 id="definingTypes">DEFINING TYPES</h3>
+      <p>
+        You can use a wide variety of design patterns in JavaScript. However, some design patterns make it
+        difficult for types to be inferred automatically (for example, patterns that use dynamic programming).
+        To cover these cases, TypeScript supports an extension of the JavaScript language, which offers places
+        for you to tell TypeScript what the types should be.
+        For example, to create an object with an inferred type which includes name: string and id: number, you can
+        write:
+      <p class="code"><br>
+        <span class="define">const</span> <span class="var">user</span> <span class="oper">= {</span>
+        name: <span class="string">"April"</span>,
+        id: 4
+        <span class="oper">, };</span>
+        <br><br>
+      </p>
+      </p>
       <br><br>
-    </p>
-    <br><br>
-    <div class="fourth">
-      <h3 class="fourth">Migrating from JavaScript</h3>
-      <p class="fourth">For information on the process of migrating your JavaScript files to TypeScript, click the link
-        below!</p>
-      <a class="fourth"
-        href="https://www.typescriptlang.org/docs/handbook/migrating-from-javascript.html">https://www.typescriptlang.org/docs/handbook/migrating-from-javascript.html</a>
-    </div><br><br><br>
-  </div>
-</body>
+      <h3 id="runtime">RUNTIME BEHAVIOR</h3>
+      <p id="third">
+        TypeScript is also a programming language that preserves the runtime behavior of JavaScript.
+        For example, dividing by zero in JavaScript produces Infinity instead of throwing a runtime exception.
+        As a principle, TypeScript never changes the runtime behavior of JavaScript code.
+        This means that if you move code from JavaScript to TypeScript, it is guaranteed to run the same way,
+        even if TypeScript thinks that the code has type errors.
+        Keeping the same runtime behavior as JavaScript is a foundational promise of TypeScript because it
+        means you can easily transition between the two languages without worrying about subtle differences
+        that might make your program stop working.
+        <br><br>
+      </p>
+      <p>TypeScript’s type system models the runtime behavior of JavaScript. This may result in some surprises if you’re
+        coming from a language with stricter runtime checks. For example:</p>
+      <p class="code">
+        <br><span class="define">const </span><span class="var">x</span> <span class="oper">=</span> 2 <span
+          class="oper">+</span> <span class="string">'3'</span><span class="oper">;</span>
+        <span class="comments">// type is string
+        </span>
+        <br>
+        <span class="define">const </span><span class="var">y</span> <span class="oper">=</span> <span
+          class="string">'2'</span> <span class="oper">+</span> 3<span class="oper">;</span>
+        <span class="comments">// type is string</span><br><br>
+      </p>
+      <br><br>
+      <div>
+        <h3 id="functions">FUNCTIONS</h3>
+        <p>Functions are the basic building block of any application, whether they’re local functions,
+          imported from another module, or methods on a class. They’re also values, and just like
+          other values, TypeScript has many ways to describe how functions can be called.
+          Let’s learn about how to write types that describe functions.<br>
+          The simplest way to describe a function is with a function type expression.
+          These types are syntactically similar to arrow functions:
+        </p>
+        <div>
+          <div><img class="codeImage" src="functioncode.png" alt="Function code"></div>
+          <p>The syntax (a: string) => void means “a function with one parameter, named a, of type
+            string, that doesn’t have a return value”. Just like with function declarations, if a
+            parameter type isn’t specified, it’s implicitly any.</p>
+          <p>Of course, we can use a type alias to name a function type:</p>
+          <div><img class="codeImage" src="greeter.png" alt="greeter function"></div>
+        </div>
+      </div>
+      <br><br>
+      <div class="fourth">
+        <h3 class="fourth">Migrating from JavaScript</h3>
+        <p class="fourth">For information on the process of migrating your JavaScript files to TypeScript, click the
+          link below!</p>
+        <a class="fourth"
+          href="https://www.typescriptlang.org/docs/handbook/migrating-from-javascript.html">https://www.typescriptlang.org/docs/handbook/migrating-from-javascript.html</a>
+      </div><br><br><br>
+    </div>
+  </body>
+</div>
 
 </html>

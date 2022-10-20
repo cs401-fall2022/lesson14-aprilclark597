@@ -1,5 +1,6 @@
 
 *{background-color: lavender;}
+/* *{font-family: 'Arial Narrow', Arial, sans-serif} */
 
 h1{
     font-size: 30px;
@@ -8,19 +9,19 @@ h1{
     
    }
 h2{
-    font-size: 16px;
+    font-size: 18px;
     text-align: center;
     background-color: rgb(198, 226, 244);
 
 }
 h3{
-    font-size: 20px;
+    font-size: 28px;
     color: purple;
     text-align: center;
-    text-decoration-line: underline;
+    text-decoration:dotted
 }
 p{
-   font-size: 14px;
+   font-size: 16px;
 }
 .fourth{
     background-color: rgb(198, 226, 244);
@@ -29,18 +30,24 @@ p{
     color: navy;
 }
 .code{
-    font-size: 12px;
+    font-size: 15px;
     font-family: monospace;
-    color: rgb(223, 127, 1);
-    background-color: white;
+    color: rgb(253, 200, 102);
+    background-color: black;
 }
+
 #logo{
     height: 200px;
 }
 
 .nav{
-    display: flex;
+    position: fixed;
+    top: 0; 
+    width: 60%;
+    margin-left: auto;
+	margin-right: auto;
 }
+
 .nav ul{
     list-style-type: none;
     background-color: pink;
@@ -56,4 +63,40 @@ p{
     text-decoration: none;
     text-size-adjust: large;
     font-size: large;
+    font-weight: 800;
+}
+.page{
+    width: 60%;
+    margin-left: auto;
+	margin-right: auto;
+}
+
+.codeImage {
+    height: 100%;
+    width: 100%
+}
+
+.define{
+    background-color: black;
+    color: rgb(167, 82, 169);
+}
+
+.comments{
+    background-color: black;
+    color: grey
+}
+
+.var{
+    background-color: black;
+    color: rgb(91, 190, 223)
+}
+
+.string{
+    background-color: black;
+    color: rgb(163, 78, 78);
+}
+
+.oper{
+    background-color: black;
+    color: white;
 }
